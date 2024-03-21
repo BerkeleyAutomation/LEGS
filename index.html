@@ -1,0 +1,244 @@
+<html>
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FYQNRK8LHK"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-FYQNRK8LHK');
+    </script>
+
+    <meta charset="utf-8" />
+    <title>Incrementally Building Room-Scale Language-Embedded Gaussian Splats (LEGS) with a Mobile Robot</title>
+
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous" />
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
+    <script
+        type="text/javascript">WebFont.load({ google: { families: ["Lato:100,100italic,300,300italic,400,400italic,700,700italic,900,900italic", "Montserrat:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic", "Ubuntu:300,300italic,400,400italic,500,500italic,700,700italic", "Open Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic", "Changa One:400,400italic", "Varela Round:400", "Bungee Shade:regular", "Roboto:300,regular,500", "Bungee Outline:regular"] } });</script>
+    <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" type="text/javascript"></script><![endif]-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="script.js" type="text/javascript"></script>
+
+    <link href="style.css" rel="stylesheet" type="text/css" />
+
+    <link href="data/favicon.png" rel="shortcut icon" type="image/x-icon" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="section">
+        <div class="container">
+            <div class="title-row">
+                <h1 class="title">MANIP</h1>
+                <h1 class="subheader"> Integrating Interactive Perception into Long-Horizon Robot Manipulation Systems </h1>
+            </div>
+            <div class="base-row author-row">
+                <div class="base-col author-col">
+                    <a href="https://uynitsuj.github.io/" target="_blank" class="author-text">
+                        Justin Yu
+                        <span class="text-star">* 1</span>
+                        <!-- <span class="text-star">*</span> -->
+                    </a>
+                </div>
+                <div class="base-col author-col">
+                    <a href="" target="_blank" class="author-text">
+                        Kush Hari
+                        <span class="text-star">* 1</span>
+                        <!-- <span class="text-star">*</span> -->
+                    </a>
+                </div>
+                <div class="base-col author-col">
+                    <a href="" target="_blank" class="author-text">
+                        Kishore Srinivas
+                        <span class="text-star">* 1</span>
+                        <!-- <span class="text-star">*</span> -->
+                    </a>
+                </div>
+                <div class="base-col author-col">
+                    <a href="" target="_blank" class="author-text">
+                        Karim El-Refai
+                        <span class="text-star">1</span>
+                        <!-- <span class="text-star">*</span> -->
+                    </a>
+                </div>
+                <div class="base-col author-col">
+                    <a href="" target="_blank" class="author-text">
+                        Adam Rashid
+                        <span class="text-star">1</span>
+                    </a>
+                </div>
+                <div class="base-col author-col">
+                    <a href="" target="_blank" class="author-text">
+                        Chung Min Kim
+                        <span class="text-star">1</span>
+                    </a>
+                </div>
+            </div>
+            <div class="base-row author-row">
+                <div class="base-col author-col">
+                    <a href="" target="_blank" class="author-text">
+                        Justin Kerr
+                        <span class="text-star">1</span>
+                    </a>
+                </div>
+                <div class="base-col author-col">
+                    <a href="" target="_blank" class="author-text">
+                        Richard Cheng
+                        <span class="text-star">2</span>
+                    </a>
+                </div>
+                <div class="base-col author-col">
+                    <a href="" target="_blank" class="author-text">
+                        Ashwin Balakrishna
+                        <span class="text-star">2</span>
+                    </a>
+                </div>
+                <div class="base-col author-col">
+                    <a href="" target="_blank" class="author-text">
+                        Thomas Kollar
+                        <span class="text-star">2</span>
+                    </a>
+                </div>
+                <div class="base-col author-col">
+                    <a href="https://goldberg.berkeley.edu/" target="_blank" class="author-text">
+                        Ken Goldberg
+                        <span class="text-star">1</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div>
+                <!-- <h1 id="uc-berkeley">UC Berkeley</h1> -->
+                <h1 id="uc-berkeley"><span class="text-star">1</span> The AUTOLab at UC Berkeley</h1>
+                <h1 id="uc-berkeley"><span class="text-star">2</span> The Toyota Research Institute</h1>
+                <!-- <br /> -->
+                <div id="equal_contrib" style="margin-top: 7px;">
+                    <span class="text-star">*</span>Denotes Equal Contribution
+                </div>
+            </div>
+            <div class="title-row">
+                <h2 class="subheader">IROS 2024 (under review)</h1>
+            </div>
+            <div class="link-labels base-row">
+                <!-- TODO: Update arxiv link -->
+                <div class="base-col icon-col"><a href="https://drive.google.com/file/d/1BFgJ5vATw6e0y0OxU05evWhqsBpGuoag" target="_blank"
+                        class="link-block"><img
+                            src="https://uploads-ssl.webflow.com/51e0d73d83d06baa7a00000f/5cab99df4998decfbf9e218e_paper-01.png"
+                            alt="paper"
+                            sizes="(max-width: 479px) 12vw, (max-width: 767px) 7vw, (max-width: 991px) 41.8515625px, 56.6953125px"
+                            srcset="https://uploads-ssl.webflow.com/51e0d73d83d06baa7a00000f/5cab99df4998decfbf9e218e_paper-01-p-500.png 500w, https://uploads-ssl.webflow.com/51e0d73d83d06baa7a00000f/5cab99df4998decfbf9e218e_paper-01.png 672w"
+                            class="icon-img" /></a></div>
+                <!-- TODO: Update code link -->
+                <div class="base-col icon-col"><a href="" class="link-block"><img
+                            src="https://uploads-ssl.webflow.com/51e0d73d83d06baa7a00000f/5cae3b53b42ebb3dd4175a82_68747470733a2f2f7777772e69636f6e66696e6465722e636f6d2f646174612f69636f6e732f6f637469636f6e732f313032342f6d61726b2d6769746875622d3235362e706e67.png"
+                            alt="paper" style="height: 60" class="icon-img github-img-icon" /></a></div>
+
+            </div>
+            <div class="link-labels base-row">
+                <div class="base-col icon-col">
+                    <strong class="link-labels-text">Paper</strong>
+                </div>
+                <div class="base-col icon-col">
+                    <strong class="link-labels-text">Code (Coming soon)</strong>
+                </div>
+            </div>
+
+            <!-- <div class="link-labels base-row"> -->
+                <!-- TODO: Update arxiv link -->
+                <!-- <div class="base-col icon-col"><a href="MANIP_Diagram.pptx" download target="_blank"
+                    class="link-block"><img
+                        src="webimgs/powerpoint.png"
+                        alt="pptx"
+                        width="40px"
+                        class="icon-img" /></a></div> -->
+                <!-- TODO: Update code link -->
+                <!-- <div class="base-col icon-col"><a href="MANIP_Diagram.key" download target="_blank"
+                    class="link-block"><img
+                        src="webimgs/key.png"
+                        alt="keynote"
+                        width="40px"
+                        class="icon-img" /></a></div>
+                <div class="base-col icon-col"><a href="https://docs.google.com/drawings/d/1EhBTvXPAdX1KEG3J2alPVtQfJk1X1HmNQeNY15VCUPQ/edit?usp=sharing" target="_blank"
+                    class="link-block"><img
+                        src="webimgs/googledraw.png"
+                        alt="google draw"
+                        width="30px"
+                        class="icon-img" /></a></div> -->
+            <!-- </div> -->
+            <!-- <br>
+            <div class="link-labels base-row">
+                <div class="base-col icon-col">
+                    <strong class="link-labels-text">Generic MANIP Diagram (Powerpoint)</strong>
+                </div>
+                <div class="base-col icon-col">
+                    <strong class="link-labels-text">Generic MANIP Diagram (Keynote)</strong>
+                </div>
+                <div class="base-col icon-col">
+                    <strong class="link-labels-text">Generic MANIP Diagram (Google Draw)</strong>
+                </div>
+            </div> -->
+            <figure>
+                <img src="PSplash2.png" style="width: 100%;" alt="Manip Diagram"/>
+                <figcaption>Large-scale language-embedded Gaussian splatting setup. The
+                    Gaussian splat 3D reconstruction was used to render a novel view of a
+                    large-scale environment. Given open-vocabulary queries, LEGS can localize
+                    the desired objects as seen with the heatmap activations.</figcaption>
+            </figure>
+            
+            <div class="base-row add-top-padding">
+                <h1 id="abstract">Overview</h1>
+                <p class="paragraph">
+                    Building semantic 3D maps can be valuable for searching offices, warehouses, stores and homes for objects of interest. We present a multi-camera mapping system that incrementally builds a Language-Embedded Gaussian Splat (LEGS), a detailed 3D scene representation that encodes both appearance and semantics in a unified representation.
+LEGS is trained online as the robot traverses its environment, enabling localization of open-vocabulary object queries.
+We evaluate LEGS on three room-scale scenes where we query random objects in the scene to assess the system's ability to capture semantic meaning. We compare our system to LERF \cite{kerr2023lerf} for these three scenes and find that while both systems have comparable object query success rates, LEGS trains over 3.5x faster than LERF. 
+Qualitative results suggest that multi-camera setup and incremental bundle adjustment boost visual reconstruction quality in constrained robot trajectories, and experimental results suggest LEGS can localize objects with up to 66\% accuracy across three large indoor environments, and produce high fidelity Gaussian Splats in an online manner by integrating bundle adjustment updates.
+                </p>
+            </div>
+
+            <!-- <div class="gallery-container">
+                <img src="images/step1.png" alt="Gallery Image" id="galleryImage" class="gallery-img">
+                <div>
+                  <button id="prevBtn" class="disabled">Previous</button>
+                  <button id="nextBtn">Next</button>
+                </div>
+              </div>
+              
+              <script>
+              let currentImageIndex = 1;
+              const imageCount = 6; // Update this to reflect the actual number of images
+              
+              function updateButtons() {
+                document.getElementById('prevBtn').classList.toggle('disabled', currentImageIndex === 1);
+                document.getElementById('nextBtn').classList.toggle('disabled', currentImageIndex === imageCount);
+              }
+              
+              document.getElementById('prevBtn').addEventListener('click', function() {
+                if (currentImageIndex > 1) {
+                  currentImageIndex--;
+                  updateImage();
+                }
+              });
+              
+              document.getElementById('nextBtn').addEventListener('click', function() {
+                if (currentImageIndex < imageCount) {
+                  currentImageIndex++;
+                  updateImage();
+                }
+              });
+              
+              function updateImage() {
+                const imagePath = `images/step${currentImageIndex}.png`;
+                document.getElementById('galleryImage').src = imagePath;
+                updateButtons();
+              }
+              
+              // Initial button state update
+              updateButtons();
+              </script>
+             -->
