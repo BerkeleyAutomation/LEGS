@@ -123,11 +123,11 @@
                 </div>
             </div>
             <div class="title-row">
-                <h2 class="subheader">IROS 2024 (under review)</h1>
+                <h2 class="subheader">IROS 2024 (Oral)</h1>
             </div>
             <div class="link-labels base-row">
                 <!-- TODO: Update arxiv link -->
-                <div class="base-col icon-col"><a href="https://drive.google.com/file/d/1tnFqpnUYDJ9yrZcA-w3wZo2EhCPU8NbI/view?usp=sharing" target="_blank"
+                <div class="base-col icon-col"><a href="https://arxiv.org/abs/2409.18108" target="_blank"
                         class="link-block"><img
                             src="https://uploads-ssl.webflow.com/51e0d73d83d06baa7a00000f/5cab99df4998decfbf9e218e_paper-01.png"
                             alt="paper"
@@ -135,7 +135,7 @@
                             srcset="https://uploads-ssl.webflow.com/51e0d73d83d06baa7a00000f/5cab99df4998decfbf9e218e_paper-01-p-500.png 500w, https://uploads-ssl.webflow.com/51e0d73d83d06baa7a00000f/5cab99df4998decfbf9e218e_paper-01.png 672w"
                             class="icon-img" /></a></div>
                 <!-- TODO: Update code link -->
-                <div class="base-col icon-col"><a href="" class="link-block"><img
+                <div class="base-col icon-col"><a href="https://github.com/BerkeleyAutomation/L3GS" class="link-block"><img
                             src="https://uploads-ssl.webflow.com/51e0d73d83d06baa7a00000f/5cae3b53b42ebb3dd4175a82_68747470733a2f2f7777772e69636f6e66696e6465722e636f6d2f646174612f69636f6e732f6f637469636f6e732f313032342f6d61726b2d6769746875622d3235362e706e67.png"
                             alt="paper" style="height: 60" class="icon-img github-img-icon" /></a></div>
 
@@ -145,47 +145,19 @@
                     <strong class="link-labels-text">Paper</strong>
                 </div>
                 <div class="base-col icon-col">
-                    <strong class="link-labels-text">Code (Coming soon)</strong>
+                    <strong class="link-labels-text">Code</strong>
                 </div>
             </div>
 
-            <!-- <div class="link-labels base-row"> -->
-                <!-- TODO: Update arxiv link -->
-                <!-- <div class="base-col icon-col"><a href="MANIP_Diagram.pptx" download target="_blank"
-                    class="link-block"><img
-                        src="webimgs/powerpoint.png"
-                        alt="pptx"
-                        width="40px"
-                        class="icon-img" /></a></div> -->
-                <!-- TODO: Update code link -->
-                <!-- <div class="base-col icon-col"><a href="MANIP_Diagram.key" download target="_blank"
-                    class="link-block"><img
-                        src="webimgs/key.png"
-                        alt="keynote"
-                        width="40px"
-                        class="icon-img" /></a></div>
-                <div class="base-col icon-col"><a href="https://docs.google.com/drawings/d/1EhBTvXPAdX1KEG3J2alPVtQfJk1X1HmNQeNY15VCUPQ/edit?usp=sharing" target="_blank"
-                    class="link-block"><img
-                        src="webimgs/googledraw.png"
-                        alt="google draw"
-                        width="30px"
-                        class="icon-img" /></a></div> -->
-            <!-- </div> -->
-            <!-- <br>
-            <div class="link-labels base-row">
-                <div class="base-col icon-col">
-                    <strong class="link-labels-text">Generic MANIP Diagram (Powerpoint)</strong>
-                </div>
-                <div class="base-col icon-col">
-                    <strong class="link-labels-text">Generic MANIP Diagram (Keynote)</strong>
-                </div>
-                <div class="base-col icon-col">
-                    <strong class="link-labels-text">Generic MANIP Diagram (Google Draw)</strong>
-                </div>
-            </div> -->
             <br>
             <video controls width="800px">              
-                <source src="LEGS_video.mp4" type="video/mp4" />
+                <source src="LEGS_Kitchen_Queries.mp4" type="video/mp4" />
+            </video>
+            <br>
+
+            <br>
+            <video controls width="800px">              
+                <source src="GroceryStoreQueries.mp4" type="video/mp4" />
             </video>
             <br>
             
@@ -200,50 +172,13 @@ Qualitative results suggest that multi-camera setup and incremental bundle adjus
                 </p>
             </div>
             <figure>
-                <img src="PSplash2.png" style="width: 100%;" alt="Manip Diagram"/>
+                <img src="PSplash2.png" style="width: 100%;" alt="LEGS"/>
+            </figure>
+
+            <figure>
+                <img src="PSplash5.png" style="width: 100%;" alt="LEGS2"/>
                 <figcaption>Large-scale language-embedded Gaussian splatting setup. The
                     Gaussian splat 3D reconstruction was used to render a novel view of a
                     large-scale environment. Given open-vocabulary queries, LEGS can localize
                     the desired objects as seen with the heatmap activations.</figcaption>
             </figure>
-            <!-- <div class="gallery-container">
-                <img src="images/step1.png" alt="Gallery Image" id="galleryImage" class="gallery-img">
-                <div>
-                  <button id="prevBtn" class="disabled">Previous</button>
-                  <button id="nextBtn">Next</button>
-                </div>
-              </div>
-              
-              <script>
-              let currentImageIndex = 1;
-              const imageCount = 6; // Update this to reflect the actual number of images
-              
-              function updateButtons() {
-                document.getElementById('prevBtn').classList.toggle('disabled', currentImageIndex === 1);
-                document.getElementById('nextBtn').classList.toggle('disabled', currentImageIndex === imageCount);
-              }
-              
-              document.getElementById('prevBtn').addEventListener('click', function() {
-                if (currentImageIndex > 1) {
-                  currentImageIndex--;
-                  updateImage();
-                }
-              });
-              
-              document.getElementById('nextBtn').addEventListener('click', function() {
-                if (currentImageIndex < imageCount) {
-                  currentImageIndex++;
-                  updateImage();
-                }
-              });
-              
-              function updateImage() {
-                const imagePath = `images/step${currentImageIndex}.png`;
-                document.getElementById('galleryImage').src = imagePath;
-                updateButtons();
-              }
-              
-              // Initial button state update
-              updateButtons();
-              </script>
-             -->
