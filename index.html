@@ -1,215 +1,311 @@
+<!DOCTYPE html>
 <html>
-
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FYQNRK8LHK"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
+  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LEGS: Incrementally Building Room-Scale Language-Embedded Gaussian Splats with a Mobile Robot </title>
 
-        gtag('config', 'G-FYQNRK8LHK');
-    </script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script> -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
 
-    <meta charset="utf-8" />
-    <title>Incrementally Building Room-Scale Language-Embedded Gaussian Splats (LEGS) with a Mobile Robot</title>
+    function gtag() {
+      dataLayer.push(arguments);
+    }
 
-    <link href="https://fonts.googleapis.com" rel="preconnect" />
-    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous" />
-    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
-    <script
-        type="text/javascript">WebFont.load({ google: { families: ["Lato:100,100italic,300,300italic,400,400italic,700,700italic,900,900italic", "Montserrat:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic", "Ubuntu:300,300italic,400,400italic,500,500italic,700,700italic", "Open Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic", "Changa One:400,400italic", "Varela Round:400", "Bungee Shade:regular", "Roboto:300,regular,500", "Bungee Outline:regular"] } });</script>
-    <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" type="text/javascript"></script><![endif]-->
+    gtag('js', new Date());
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-    <script src="script.js" type="text/javascript"></script>
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
 
-    <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
 
-    <link href="data/favicon.png" rel="shortcut icon" type="image/x-icon" />
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
 </head>
-
 <body>
-    <div class="section">
-        <div class="container">
-            <div class="title-row">
-                <h1 class="title">LEGS</h1>
-                <h1 class="subheader"> Incrementally Building Room-Scale Language-Embedded Gaussian Splats (LEGS) with a Mobile Robot </h1>
-            </div>
-            <div class="base-row author-row">
-                <div class="base-col author-col">
-                    <a href="https://uynitsuj.github.io/" target="_blank" class="author-text">
-                        Justin Yu
-                        <span class="text-star">* 1</span>
-                        <!-- <span class="text-star">*</span> -->
-                    </a>
-                </div>
-                <div class="base-col author-col">
-                    <a href="" target="_blank" class="author-text">
-                        Kush Hari
-                        <span class="text-star">* 1</span>
-                        <!-- <span class="text-star">*</span> -->
-                    </a>
-                </div>
-                <div class="base-col author-col">
-                    <a href="" target="_blank" class="author-text">
-                        Kishore Srinivas
-                        <span class="text-star">* 1</span>
-                        <!-- <span class="text-star">*</span> -->
-                    </a>
-                </div>
-                <div class="base-col author-col">
-                    <a href="" target="_blank" class="author-text">
-                        Karim El-Refai
-                        <span class="text-star">1</span>
-                        <!-- <span class="text-star">*</span> -->
-                    </a>
-                </div>
-                <div class="base-col author-col">
-                    <a href="" target="_blank" class="author-text">
-                        Adam Rashid
-                        <span class="text-star">1</span>
-                    </a>
-                </div>
-            </div>
-            <div class="base-row author-row">
-                <div class="base-col author-col">
-                    <a href="" target="_blank" class="author-text">
-                        Chung Min Kim
-                        <span class="text-star">1</span>
-                    </a>
-                </div>
-                <div class="base-col author-col">
-                    <a href="" target="_blank" class="author-text">
-                        Justin Kerr
-                        <span class="text-star">1</span>
-                    </a>
-                </div>
-                <div class="base-col author-col">
-                    <a href="" target="_blank" class="author-text">
-                        Richard Cheng
-                        <span class="text-star">2</span>
-                    </a>
-                </div>
-                <div class="base-col author-col">
-                    <a href="" target="_blank" class="author-text">
-                        Muhammad Zubair Irshad
-                        <span class="text-star">2</span>
-                    </a>
-                </div>
-            </div>
-            <div class="base-row author-row">
-                <div class="base-col author-col">
-                    <a href="" target="_blank" class="author-text">
-                        Ashwin Balakrishna
-                        <span class="text-star">2</span>
-                    </a>
-                </div>
-                <div class="base-col author-col">
-                    <a href="" target="_blank" class="author-text">
-                        Thomas Kollar
-                        <span class="text-star">2</span>
-                    </a>
-                </div>
-                <div class="base-col author-col">
-                    <a href="https://goldberg.berkeley.edu/" target="_blank" class="author-text">
-                        Ken Goldberg
-                        <span class="text-star">1</span>
-                    </a>
-                </div>
-            </div>
-            
-            <div>
-                <!-- <h1 id="uc-berkeley">UC Berkeley</h1> -->
-                <h1 id="uc-berkeley"><span class="text-star">1</span> The AUTOLab at UC Berkeley</h1>
-                <h1 id="uc-berkeley"><span class="text-star">2</span> The Toyota Research Institute</h1>
-                <!-- <br /> -->
-                <div id="equal_contrib" style="margin-top: 7px;">
-                    <span class="text-star">*</span>Denotes Equal Contribution
-                </div>
-            </div>
-            <div class="title-row">
-                <h2 class="subheader">IROS 2024 (Oral)</h1>
-            </div>
-            <div class="link-labels base-row">
-                <!-- TODO: Update arxiv link -->
-                <div class="base-col icon-col"><a href="https://arxiv.org/abs/2409.18108" target="_blank"
-                        class="link-block"><img
-                            src="https://uploads-ssl.webflow.com/51e0d73d83d06baa7a00000f/5cab99df4998decfbf9e218e_paper-01.png"
-                            alt="paper"
-                            sizes="(max-width: 479px) 12vw, (max-width: 767px) 7vw, (max-width: 991px) 41.8515625px, 56.6953125px"
-                            srcset="https://uploads-ssl.webflow.com/51e0d73d83d06baa7a00000f/5cab99df4998decfbf9e218e_paper-01-p-500.png 500w, https://uploads-ssl.webflow.com/51e0d73d83d06baa7a00000f/5cab99df4998decfbf9e218e_paper-01.png 672w"
-                            class="icon-img" /></a></div>
-                <!-- TODO: Update code link -->
-                <div class="base-col icon-col"><a href="https://github.com/BerkeleyAutomation/L3GS" class="link-block"><img
-                            src="https://uploads-ssl.webflow.com/51e0d73d83d06baa7a00000f/5cae3b53b42ebb3dd4175a82_68747470733a2f2f7777772e69636f6e66696e6465722e636f6d2f646174612f69636f6e732f6f637469636f6e732f313032342f6d61726b2d6769746875622d3235362e706e67.png"
-                            alt="paper" style="height: 60" class="icon-img github-img-icon" /></a></div>
 
-            </div>
-            <div class="link-labels base-row">
-                <div class="base-col icon-col">
-                    <strong class="link-labels-text">Paper</strong>
-                </div>
-                <div class="base-col icon-col">
-                    <strong class="link-labels-text">Code</strong>
-                </div>
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">LEGS: Incrementally Building Room-Scale Language-Embedded Gaussian Splats with a Mobile Robot </h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://uynitsuj.github.io">Justin Yu</a><sup>*1</sup>,</span>
+            <span class="author-block">
+              <a href="">Kush Hari</a><sup>*1</sup>,</span>
+            <span class="author-block">
+              <a href="">Kishore Srinivas</a><sup>*1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="">Karim El-Refai</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="">Adam Rashid</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="">Justin Kerr</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="">Chung-Min Kim</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="">Richard Cheng</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="">Muhammad Zubair Irshad</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="">Ashwin Balakrishna</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="">Thomas Kollar</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+               <a href="">Ken Goldberg</a><sup>1</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>University of California, Berkeley</span>
+            <span class="author-block"><sup>2</sup>Toyota Research Institute</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://autolab.berkeley.edu/assets/publications/media/2024_IROS_LEGS_CR.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2409.18108"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/BerkeleyAutomation/L3GS"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <!-- <span class="link-block">
+                <a href="https://github.com/google/nerfies/releases/tag/0.1"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data (Coming Soon)</span>
+                  </a> -->
             </div>
 
-            <br>
-            <video controls autoplay loop width="800px">              
-                <source src="LEGS_Kitchen_Queries.mp4" type="video/mp4" />
-            </video>
-            <br>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-            <br>
-            <video controls autoplay loop width="800px">              
-                <source src="GroceryStoreQueries.mp4" type="video/mp4" />
-            </video>
-            <br>
-            
-            
-            <div class="base-row add-top-padding">
-                <h1 id="abstract">Overview</h1>
-                <p class="paragraph">
-                    Building semantic 3D maps can be valuable for searching offices, warehouses, stores and homes for objects of interest. We present a multi-camera mapping system that incrementally builds a Language-Embedded Gaussian Splat (LEGS), a detailed 3D scene representation that encodes both appearance and semantics in a unified representation.
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./LEGS_Kitchen_Queries.mp44"
+                type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf"><b>LEGS</b></span> embeds CLIP features into room-scale scenes in an online manner.
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <!-- <div id="results-carousel" class="carousel results-carousel"> -->
+        <!-- <div class="item item-steve"> -->
+          <video poster="" id="steve" autoplay muted loop playsinline height="100%">
+            <source src="./GroceryStoreQueries.mp4"
+                    type="video/mp4">
+          </video>
+        <!-- </div> -->
+        <!-- <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/chair-tp.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/shiba.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/fullbody.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-blueshirt">
+          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/blueshirt.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/mask.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-coffee">
+          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/coffee.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-toby">
+          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/toby2.mp4"
+                    type="video/mp4">
+          </video>
+        </div> -->
+      </div>
+    <!-- </div> -->
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Building semantic 3D maps can be valuable for searching offices, warehouses, stores and homes for objects of interest. We present a multi-camera mapping system that incrementally builds a Language-Embedded Gaussian Splat (LEGS), a detailed 3D scene representation that encodes both appearance and semantics in a unified representation.
 LEGS is trained online as the robot traverses its environment, enabling localization of open-vocabulary object queries.
 We evaluate LEGS on three room-scale scenes where we query random objects in the scene to assess the system's ability to capture semantic meaning. We compare our system to LERF for these three scenes and find that while both systems have comparable object query success rates, LEGS trains over 3.5x faster than LERF. 
 Qualitative results suggest that multi-camera setup and incremental bundle adjustment boost visual reconstruction quality in constrained robot trajectories, and experimental results suggest LEGS can localize objects with up to 66% accuracy across three large indoor environments, and produce high fidelity Gaussian Splats in an online manner by integrating bundle adjustment updates.
-                </p>
-            </div>
-            <figure>
-                <img src="PSplash2.png" style="width: 100%;" alt="LEGS"/>
-            </figure>
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
 
-            <figure>
-                <img src="PSplash5.png" style="width: 100%;" alt="LEGS2"/>
-                <figcaption>Large-scale language-embedded Gaussian splatting setup. The
-                    Gaussian splat 3D reconstruction was used to render a novel view of a
-                    large-scale environment. Given open-vocabulary queries, LEGS can localize
-                    the desired objects as seen with the heatmap activations.</figcaption>
-            </figure>
+    
 
-            <div class="citation add-top-padding">
-                <h1 id="abstract"> Citation </h1>
-                <p> If you use this work or find it helpful, please consider citing: (bibtex) </p>
-                <pre id="codecell0">@article{yu2024language,
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <!-- <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div> -->
+        <figure>
+            <img src="PSplash2.png" style="width: 100%;" alt="LEGS"/>
+        </figure>
+
+        <figure>
+            <img src="PSplash5.png" style="width: 100%;" alt="LEGS2"/>
+            <figcaption>Large-scale language-embedded Gaussian splatting setup. The
+                Gaussian splat 3D reconstruction was used to render a novel view of a
+                large-scale environment. Given open-vocabulary queries, LEGS can localize
+                the desired objects as seen with the heatmap activations.</figcaption>
+        </figure>
+      </div>
+    </div>
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{yu2025legs,
 title={Language-Embedded Gaussian Splats (LEGS): Incrementally Building Room-Scale Representations with a Mobile Robot},
 author={Yu, Justin and Hari, Kush and Srinivas, Kishore and El-Refai, Karim and Rashid, Adam 
 and Kim, Chung Min and Kerr, Justin and Cheng, Richard and Irshad, Muhammad Zubair 
 and Balakrishna, Ashwin and Kollar, Thomas and Goldberg, Ken},
-journal={arXiv preprint arXiv:2409.18108},
-year={2024}
-} </pre>
-            </div>
-            
-            <div>
-                <h1 id="abstract"> Acknowledgements </h1>
-                <p> This work was supported by the Toyota Research Institute (TRI)</p>
-            </div>
-            <div>
-                <h2 id="abstract"> For questions, please contact</h2>
-                <pre id="codecell0"> yujustin@berkeley.edu, kush_hari@berkeley.edu</pre>
-            </div>
-            
+  journal   = {IROS},
+  year      = {2024},
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="./static/videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This means you are free to borrow the <a
+              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
+            we just ask that you link back to this page in the footer.
+            Please remember to remove the analytics code included in the header of the website which
+            you do not want on your website.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
+
