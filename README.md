@@ -1,6 +1,6 @@
 # LEGS
 
-This is the repository that contains source code for the [LEGS website](berkeleyautomation.github.io/LEGS/).
+This is the repository that contains source code for the [LEGS website](https://berkeleyautomation.github.io/LEGS).
 
 If you find LEGS useful for your work please cite:
 ```
